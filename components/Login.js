@@ -3,7 +3,7 @@ import { signIn } from "next-auth/client";
 
 function Login() {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center h-screen">
       <div className="grid place-items-center">
         <FontAwesomeIcon
           className="text-blue-500 mb-8"

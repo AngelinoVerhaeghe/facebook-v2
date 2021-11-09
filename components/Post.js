@@ -1,14 +1,16 @@
 import Image from "next/image";
 import { ChatAltIcon, ShareIcon, ThumbUpIcon } from "@heroicons/react/outline";
+import { useSession } from "next-auth/client";
 
 function Post({ name, message, email, postImage, image, timestamp }) {
+  const [session] = useSession();
   return (
     <div className="flex flex-col">
       <div className="p-5 bg-white mt-5 rounded-t-2xl shadow-sm">
         <div className="flex items-center space-x-2">
           <img
             className="rounded-full"
-            src={image}
+            src={session.user.image}
             width={40}
             height={40}
             alt=""
